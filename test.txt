@@ -1,0 +1,10 @@
+Aqui eu preciso salvar com sudo pq foi criado pelo usuário root no container
+
+Para corrigir isso uso o comando do terminal:
+sudo chown myuser:myuser test.txt
+
+-> sudo pq como foi o root que criou preciso de alta permissão para mudar o proprietário do arquivo.
+
+para pode rodar o container como root agora é só usar o:
+-u root no docker-compose exec
+docker-compose exec -u root app bash
